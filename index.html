@@ -1,19 +1,28 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Meat Boy (Ruffle)</title>
+  <meta charset="utf-8">
+  <title>Meat Boy</title>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <style>
-    html, body { margin: 0; height: 100%; display: flex; justify-content: center; align-items: center; background: #111; }
-    object { width: 800px; height: 600px; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #111;
+      overflow: hidden;
+    }
+    #ruffle-player {
+      width: 100vw;   /* 100% of window width */
+      height: 100vh;  /* 100% of window height */
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <object id="ruffle-player" data="meat-boy-2388.swf" type="application/x-shockwave-flash">
-    <param name="movie" value="meat-boy-2388.swf" />
-    <p>If the game doesn’t load, check the SWF filename.</p>
-  </object>
+  <object id="ruffle-player" data="meat-boy-2388.swf"></object>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const ruffle = window.RufflePlayer.newest();
